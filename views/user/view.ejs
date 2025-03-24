@@ -1,0 +1,12 @@
+<%- include('../inc/header') %>
+<h1>Chức năng thêm mới</h1>
+<p style='border: 1px solid green'>    
+    <%= msg.join('<br>') %>
+</p>
+<% if (objU != null) { %>
+    Username: <%= objU.username %> <br>
+    Email: <%= objU.email %> <br>
+    Fullname: <%= objU.fullname %> <br>
+<% } %> 
+
+<%- include('../inc/footer') %>

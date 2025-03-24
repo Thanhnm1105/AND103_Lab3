@@ -1,0 +1,20 @@
+<%- include('../inc/header') %>
+
+
+    <h1>Sửa user</h1>
+
+    <p style="border: 1px solid green">
+        <%= msg.join('<br>') %>
+    </p>
+    <% if(objU!=null) {%>
+
+    <form action="" method="post">
+        username: <input type="text" name="username" value="<%= objU.username %>"> <br>
+        password: <input type="text" name="passwd" value="<%= objU.passwd %>"> <br>
+        email: <input type="text" name="email" value="<%= objU.email %>"> <br>
+        fullname: <input type="text" name="fullname" value="<%= objU.fullname %>"> <br>
+        <button type="submit"> Save </button>
+    </form>
+    <% } %>
+
+    <%- include('../inc/footer') %>

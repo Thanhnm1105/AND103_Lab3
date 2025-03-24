@@ -1,0 +1,24 @@
+<%- include('../inc/header')  %>
+
+
+<h1>Thêm mới user</h1>
+
+
+<p style="border: 1px solid green">
+   <%= msg.join('<br>')  %>
+</p>
+
+
+<form action="" method="post">
+   username: <input type="text" name="username" > <br>
+password: <input type="text" name="passwd" > <br>
+
+
+   email: <input type="text" name="email" > <br>
+   fullname: <input type="text" name="fullname" > <br>
+   <button type="submit"> Save </button>
+</form>
+
+
+<%- include('../inc/footer')  %>
+

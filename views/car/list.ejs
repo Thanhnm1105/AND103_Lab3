@@ -1,0 +1,38 @@
+<%- include('../inc/header') %>
+
+<h1 style="text-align: center; color: #333;">Danh sách tài khoản</h1>
+
+
+    <table border="1" cellpadding="10" style="
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background: #f9f9f9;">
+   <tr style="background: #007bff; color: white;">
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Năm</th>
+            <th>Giá</th>
+            <th>Hãng</th>
+            <th>Trạng thái</th>
+            <th>Mô tả</th>
+            <th>Hình ảnh</th>
+            <th>Hành động</th>
+        </tr>
+        <% listCars.forEach(car => { %>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td><%= car._id %></td>
+                <td><%= car.name %></td>
+                <td><%= car.year %></td>
+                <td><%= car.price %></td>
+                <td><%= car.brand %></td>
+                <td><%= car.status %></td>
+                <td><%= car.description %></td>
+                <td><img src="<%= car.image %>" width="120" height="100"></td>
+                <td>
+                    <a href="/cars/delete/<%= car._id %>">Xóa</a>
+                </td>
+            </tr>
+        <% }); %>
+    </table>
+    <%- include('../inc/footer') %>

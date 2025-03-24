@@ -1,0 +1,60 @@
+<%- include('../inc/header') %>
+
+<h1 style="text-align: center; color: #333;">Danh sách tài khoản</h1>
+
+<p style="border: 1px solid green; ">
+   <%= msg.join('<br>') %>
+</p>
+
+<div style="margin-bottom: 15px;">
+    <a href="/users/add" style="
+        display: inline-block;
+        padding: 10px 15px;
+        background: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;">
+         Thêm mới user
+    </a>
+</div>
+
+<table border="1" cellpadding="10" style="
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background: #f9f9f9;">
+   <tr style="background: #007bff; color: white;">
+       <th>ID</th>
+       <th>Username</th>
+       <th>Email</th>
+       <th>Fullname</th>
+       <th>Hành động</th>
+   </tr>
+
+<% listUser.forEach( objU => { %>
+    <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 10px;"><%= objU.id %></td>
+        <td style="padding: 10px;"><%= objU.username %></td>
+        <td style="padding: 10px;"><%= objU.email %></td>
+        <td style="padding: 10px;">
+            <a href="/users/view/<%= objU._id %>" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">
+                <%= objU.fullname %>
+            </a>
+        </td>
+        <td style="padding: 10px;">
+            <a href="/users/edit/<%= objU._id %>" target="_blank" style="
+                background: orange;
+                padding: 5px 10px;
+                color: white;
+                text-decoration: none;
+                border-radius: 3px;">
+                 Sửa
+            </a>
+        </td>
+    </tr>
+<% }); %>
+
+</table>
+
+<%- include('../inc/footer') %>

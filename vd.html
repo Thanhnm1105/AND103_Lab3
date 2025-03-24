@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background: yellow;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .nav a:hover {
+            background: orange;
+        }
+
+        .footer {
+            background: green;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .body {
+            min-height: 300px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Đầu trang</h1>
+        <div class="nav">
+            <a href="/views/product">Danh sách</a>
+            <a href="/views/product/add">Thêm mới</a>
+        </div>
+    </div>
+
+    <div class="body">
+        <p>Chào mừng bạn đến với trang sản phẩm!</p>
+    </div>
+
+    <div class="footer">
+        © 2025 - Trang web của bạn
+    </div>
+</body>
+
+</html>
